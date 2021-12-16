@@ -1,0 +1,7 @@
+---
+
+# custom config that overrides or extends default
+# existing entry matches default and does nothing
+sshconfig_custom_sshd_config:
+  - key: "PermitRootLogin"
+    value: "no"

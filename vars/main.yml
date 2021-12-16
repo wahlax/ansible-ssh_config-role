@@ -1,0 +1,11 @@
+---
+
+# defaults to set in sshd_config
+# override or extend in sshconfig_custom_sshd_config
+sshconfig_default_sshd_config:
+  - key: "PermitRootLogin"
+    value: "no"
+  - key: "PermitEmptyPasswords"
+    value: "no"
+  - key: "PasswordAuthentication"
+    value: "no"

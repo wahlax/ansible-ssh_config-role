@@ -1,0 +1,12 @@
+---
+
+- name: Reconfigure sshd_config
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: "^{{ item.key }} "
+    insertafter: "^#{{ item.key }} "
+    firstmatch: "yes"
+    line: "{{ item.key }} {{ item.value }}"
+    validate: 'sshd -T -f %s'
+  with_items: "{{ ( sshconfig_default_sshd_config | items2dict) | combine(sshconfig_custom_sshd_config | items2dict) | dict2items }}"
+  notify: restart sshd

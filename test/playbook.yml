@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  become: yes
+
+  roles:
+    - role: ../../ansible-sshconfig-role
+      sshconfig_custom_sshd_config:
+        - key: "PermitEmptyPasswords"
+          value: "no"

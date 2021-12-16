@@ -1,0 +1,10 @@
+---
+
+dependencies: []
+
+galaxy_info:
+  role_name: sshconfig
+  author: wahlax
+  description: Reconfigure sshd
+  company: WAHLAX LLC
+  license: MIT
