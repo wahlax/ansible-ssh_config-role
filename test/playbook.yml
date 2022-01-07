@@ -4,7 +4,7 @@
   become: yes
 
   roles:
-    - role: ../../ansible-sshconfig-role
+    - role: ../../ansible-ssh_config-role
       sshconfig_custom_sshd_config:
         - key: "PermitEmptyPasswords"
           value: "no"

@@ -3,7 +3,7 @@
 dependencies: []
 
 galaxy_info:
-  role_name: sshconfig
+  role_name: ssh_config
   author: wahlax
   description: Reconfigure sshd
   company: WAHLAX LLC
